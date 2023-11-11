@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Open+Sans:wght@300;600&display=swap');
+
+body {
+    font-family: 'serif';
+    --border-color: rgb(210, 210, 210);
+    --border: 1px solid var(--border-color);
+    --title-color: black;
+    --background-alt: #3371bf1a;
+    --vertical-spacing: 0.4rem;
+    --margin-blocks: 1.7rem;
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+main {
+    max-width: 1000px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white;
+}
+
+aside {
+    max-width: 34%;
+}
+
+header {
+    background-color: var(--background-alt);
+    padding: 1rem var(--margin-blocks);
+    margin-bottom: var(--vertical-spacing);
+}
+
+.coverletter header {
+    background: none;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: inline-block;
+}
+
+header h1 {
+    font-size: 2.0rem;
+    margin-right: 0.1em;
+}
+
+
+.coverletter header p {
+    font-style: normal;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+section {
+    padding: 0 var(--margin-blocks);
+    margin-bottom: var(--vertical-spacing);
+}
+
+.layout {
+    display: flex;
+    gap: var(--half-gap);
+    border-top: var(--border);
+}
+
+.layout h2 {
+    font-variant: small-caps;
+    color: var(--title-color);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.layout h2::after {
+    display: block;
+    content: "";
+    border: 2px solid var(--title-color);
+    width: 10%;
+}
+
+.layout aside {
+    border-right: var(--border);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.experience p.title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: var(--background-alt);
+}
+
+.experience p {
+    margin: 0.8rem 0;
+}
+
+.experience ul:before {
+    display: inline;
+    content: "🏗️";
+    font-size: 1.5rem;
+    float: left;
+    margin-right: 4px;
+    height: 2em;
+}
+.experience li:not(:last-child):after {
+    display: inline;
+    content: " · ";
+}
+
+
+.experience li {
+    display: inline;
+    font-style: italic;
+}
