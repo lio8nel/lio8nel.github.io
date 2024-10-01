@@ -1,0 +1,7 @@
+h1, h2, ul, dl {
+    margin: 0;   
+}
+
+* {
+    box-sizing: border-box;
+}
