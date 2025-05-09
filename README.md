@@ -1,5 +1,24 @@
-# Vue 3 + Vite
+# lio8nel.github.io
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is my resume built with un-necessary complexity 😇
+* Uses github pages for hosting
+* Is based on a Vue.js app that is rendered as a static page at build time
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Coming soon:
+* Backing the content through an online cloud db
+* Refactoring the components to something more open/close, likely using slots
+* New CSS that's less making my resume looking like a 90's website 😅
+
+## Build on local
+
+```bash
+git clone git@github.com:lio8nel/lio8nel.github.io.git
+npm install😅
+npm run build
+```
+
+## Preview on local
+
+```bash
+npm run build && npm run preview
+```
