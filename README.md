@@ -13,7 +13,7 @@ Coming soon:
 
 ```bash
 git clone git@github.com:lio8nel/lio8nel.github.io.git
-npm install😅
+npm install
 npm run build
 ```
 
