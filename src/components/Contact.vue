@@ -4,19 +4,25 @@
     <dl class="info">
       <dt class="sr-only">E-mail</dt>
       <dd>
-        <a href="mailto:lionel.armanet@gmail.com">lionel.armanet@gmail.com</a>
+        <a :href="`mailto:${contact.email}`">{{ contact.email }}</a>
       </dd>
       <dt class="sr-only">Phone</dt>
       <dd>
-        <a href="tel:+33682346787">+33682346787</a>
+        <a :href="`tel:${contact.phone}`">{{ contact.phone }}</a>
       </dd>
       <dt class="sr-only">Workplace</dt>
-      <dd>Grenoble - France</dd>
+      <dd>{{ contact.workplace }}</dd>
       <dt class="sr-only">Languages</dt>
-      <dd>French, English (fluent)</dd>
+      <dd>{{ languages.join(', ') }}</dd>
     </dl>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { Contact } from '../core/Resume'
+
+defineProps<{
+  contact: Contact,
+  languages: string[]
+}>()
 </script> 

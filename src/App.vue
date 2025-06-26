@@ -5,20 +5,27 @@ import Skills from './components/Skills.vue'
 import QuickIntro from './components/QuickIntro.vue'
 import WorkHistory from './components/WorkHistory.vue'
 import Education from './components/Education.vue'
+import { ResumeRepository } from './core/Resume'
+
+const resumeRepository = new ResumeRepository()
+const resume = resumeRepository.load()
 </script>
 
 <template>
   <main>
     <div class="layout">
-      <Header />
+      <Header 
+        :avatarPath="resume.avatarPath" 
+        :fullName="resume.fullName" 
+        :title="resume.title" />
       <div class="sidebar">
-        <Contact />
-        <Skills />
+        <Contact :contact="resume.contact" :languages="resume.misc.languages" />
+        <Skills :skills="resume.skills.getAll()" :hobbies="resume.hobbies" />
       </div>
       <div class="content">
-        <QuickIntro />
-        <WorkHistory />
-        <Education />
+        <QuickIntro :quickIntro="resume.content.quickIntro" />
+        <WorkHistory :workHistory="resume.content.workHistory" />
+        <Education :education="resume.content.education" />
       </div>
     </div>
   </main>

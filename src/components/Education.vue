@@ -2,18 +2,17 @@
   <section>
     <h2>Education</h2>
     <ul class="history">
-      <li>
-        2006 - Master's degree in Software Engineering - Université Joseph Fourrier - Grenoble
-      </li>
-      <li>
-        2003 - Bachelor's degree in Computer Science - Universté de Savoie - Le Bourget du Lac
-      </li>
-      <li>
-        2000 - French A-levels
+      <li v-for="(entry, idx) in education" :key="idx">
+        {{ entry.year }} - {{ entry.degree }}<span v-if="entry.institution"> - {{ entry.institution }}</span>
       </li>
     </ul>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { EducationEntry } from '../core/Resume'
+
+defineProps<{
+  education: EducationEntry[]
+}>()
 </script>

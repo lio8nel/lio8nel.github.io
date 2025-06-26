@@ -8,13 +8,6 @@ describe("App.vue", () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  it("renders the header", () => {
-    // Arrange
-    const wrapper = mount(App);
-
-    // Assert
-  });
-
   it("contains all main components", () => {
     const wrapper = mount(App);
 
