@@ -15,6 +15,11 @@ body {
   --header-background: var(--jet);
   --header-color: white;
 
+  background-color: #e8e8f1;
+  background-image:  linear-gradient(#dbdbdb 2px, transparent 2px), linear-gradient(90deg, #dbdbdb 2px, transparent 2px), linear-gradient(#dbdbdb 1px, transparent 1px), linear-gradient(90deg, #dbdbdb 1px, #e8e8f1 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
   font-family: "Montserrat", system-ui;
 }
 
@@ -45,6 +50,7 @@ main {
   grid-template-areas:
     "header header"
     "column content";
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 header {
@@ -110,6 +116,7 @@ header .title h2 {
 
 .content {
   grid-area: content;
+  background-color: white;
 }
 
 .content section h2,
